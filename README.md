@@ -13,10 +13,10 @@ These files have been submitted to this Repo:
 
 ## run_analysis.R file
 
-### The goal of this script : Cleaning the dataset (please refer to the next section that briefly explains the data set and provides the link to download it), creating a tidy first dataset presented in WIDE FORM, create a second and independent tidy dataset with the average of each variable for each activity and each subject and export it to the TidySet.txt file.
+### IMPORTANT: You MUST run this Script AS YOUR WORKING DIRECTORY IN R SPECIFICALLY in THE "UCI HAR Dataset" folder of your computer where you downloaded the data locally (For dataset information and a link to download it please refer to the next section),OTHERWISE the script will NOT RUN as expected.
+### Dependency packages:run_analysis.R file depends on data.table, dplyr and tidyr packages. This packages will be loaded for you when you run your script but first you need to install them in you R Environmment using install.packages() command, please refer to R help for details on this procedure.
 
-I M P O R T A N T: You MUST run this Script AS YOUR WORKING DIRECTORY IN R SPECIFICALLY in THE "UCI HAR Dataset" folder of your computer where you downloaded the data locally (For dataset information and a link to download it please refer to the next section),OTHERWISE the script will NOT RUN as expected.
-Dependency packages:run_analysis.R file depends on data.table, dplyr and tidyr packages. This packages will be loaded for you when you run your script but first you need to install them in you R Environmment using install.packages() command, please refer to R help for details on this procedure.
+The goal of this script : Cleaning the dataset (please refer to the next section that briefly explains the data set and provides the link to download it), creating a tidy first dataset presented in WIDE FORM, create a second and independent tidy dataset with the average of each variable for each activity and each subject and export it to the TidySet.txt file.
 
 This program consists of five main parts:
 
