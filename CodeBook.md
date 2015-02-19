@@ -66,10 +66,10 @@ After the selecting process that only selects the "-mean" and "-std" column name
 
 Once that the initial dataset have been done, the script proceed to generate the final dataset and export it to a file named TidySet.txt that is created in your working directory. For this final dataset named "tidySet" into the R script, I have apply the rules of tidying data and present the dataset in LONG form with the following variables and descriptions:
 
-"id_Subject": Id of the subject performing activities
-"Activity"  : Activity performed by the subject 
-"Variable"  : Selected Variable, this comes from the initial dataset and are all the columns EXCEPT "id_Activity", "Activity" and "id_Subject" 
-"Value"     :Mean of the Value grouped by "id_Subject", "Activity" and "Variable"
+* "id_Subject": Id of the subject performing activities
+* "Activity"  : Activity performed by the subject 
+* "Variable"  : Selected Variable, this comes from the initial dataset and are all the columns EXCEPT "id_Activity", * * "Activity" and "id_Subject" 
+* "Value"     :Mean of the Value grouped by "id_Subject", "Activity" and "Variable"
 
 The final dataset have 14220 observations (The result of 30 subjects, performing 6 activities of 79 variables) and fulfill the tidy data rules.
 
