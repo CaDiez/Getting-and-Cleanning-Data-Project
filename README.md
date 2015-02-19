@@ -5,10 +5,10 @@ Repo Made for submitting the Getting and Cleanning Data Project.
 The purpose of this project is to demonstrate the ability to collect, work with, and clean a given data set. The goal is to prepare tidy data that can be used for later analysis.
 
 These files have been submitted to this Repo:
-1) run_analysis.R file contains the script.
-2) A tidy data set presented in LONG FORM named TidySet.md.
-3) A Code Book file called called CodeBook.md that describes the variables, the data, and the transformations that have been performed to clean up the data, the description of the variables for the first WIDE FORM data set and the second independent LONG FORM exported data.
-4)This ReadMe.md file that explains how the script works.
+1. run_analysis.R file contains the script.
+2. A tidy data set presented in LONG FORM named TidySet.md.
+3. A Code Book file called called CodeBook.md that describes the variables, the data, and the transformations that have been performed to clean up the data, the description of the variables for the first WIDE FORM data set and the second independent LONG FORM exported data.
+4.This ReadMe.md file that explains how the script works.
 
 ## run_analysis.R file
 
