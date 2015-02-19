@@ -1,5 +1,5 @@
 # Getting-and-Cleanning-Data-Project
-Repo Made for submitting the Getting and Cleanning Data Project.
+Repo Made for submitting the Getting and Cleanning Data Project. 
 
 ## Description of Project
 The purpose of this project is to demonstrate the ability to collect, work with, and clean a given data set. The goal is to prepare tidy data that can be used for later analysis.
