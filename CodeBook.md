@@ -35,6 +35,8 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 ### Transformations and variable description
 
+No UNITS are used with this DataSet transformation, grouping and summary operations are described below.
+
 For detail about the 5 steps required for the Coursera Assignment please refer to ReadMe.md file
 
 The original dataset (the joinning of trainning & test files) contains 10299 observations and 561 variables  AFTER filtering any column name. For details about the original data and its variables please refer to the "Source of Data" section of this document.
