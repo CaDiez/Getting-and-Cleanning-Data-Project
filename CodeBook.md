@@ -1,21 +1,24 @@
 # Getting and Cleaning Data Project
 
 # CodeBook Help File
-This is a code book that describes the variables, the data, and any transformations or work that I performed to clean up the data.
+This is a code book that describes the variables, the data, and any transformations or work that I have performed to clean up the data provided for this project.
+
+Note: I'm making this CodeBook a little more explained than normally is on purpose in order to help markers easier to read.
 
 ### Source of Data
-Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-The dataset has been unzipped as provided, please refer to README.md file or run_analysis.R inner code commentaries to see the way which you must unzip the data in order to make the code works, for more information please refer to the following link:
 
-Original description of the dataset: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+> Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-### Data Set Information
+The dataset has been unzipped as provided, please refer to README.md file or run_analysis.R inner code commentaries to see the way which you must unzip the data in order to make the script code works.
+
+### Data Set General Information
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-### All the Data
+### About the data
+
 The Original Dataset includes the following files:
 
 * 'README.txt'
@@ -26,14 +29,23 @@ The Original Dataset includes the following files:
 * 'train/y_train.txt': Training labels.
 * 'test/X_test.txt': Test set.
 * 'test/y_test.txt': Test labels.
+* 
+> For the original description of the dataset please follow:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ### Transformations:
 
-The original dataset contains 10299 observations and 561 variables AFTER filtering any column name. For details about the original data and its variables please refer to the "Source of Data" section of this document.
+The coursera project description steps for the assigning are the following:
 
-The script have been made to decompose information of the original data set, select only the variables that containst the words "-mean" and "-std" in their names an create an initial NEW data set with that information. If you refer to the coursera project description this would be from Setp 1 to 4 of the assignment.
+* Step 1: Merges the training and the test sets to create one data set.
+* Step 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
+* Step 3:Uses descriptive activity names to name the activities in the data set
+* Step 4: Appropriately labels the data set with descriptive variable names. 
+* Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-After the selecting process that only selects the "-mean" and "-std" column names the new initial data set is composed of 10299 observations and 82 variables named "MergedDSAll" in the run_analysis.R script, this initial tidy dataset is presented in WIDE FORM and it´s variables are the following:
+The original dataset (the joinning of trainning & test files) contains 10299 observations and 561 variables  AFTER filtering any column name. For details about the original data and its variables please refer to the "Source of Data" section of this document.
+
+The script run_analysis.R have been made to decompose information of the original data set, select only the variables that contains the words "-mean" and "-std" in their names an create an initial NEW data set with that information. If you refer to the coursera project description this would be from Step 1 to 4 of the assignment. After the selecting process that only selects the "-mean" and "-std" column names the new initial data set is composed of 10299 observations and 82 variables into a data.table object named "MergedDSAll" in the run_analysis.R script, this initial tidy dataset is presented in WIDE FORM and it´s variables are the following:
 
  [1] "id_Activity"                     "Activity"                        "id_Subject"                     
  [4] "tBodyAcc-mean()-X"               "tBodyAcc-mean()-Y"               "tBodyAcc-mean()-Z"              
@@ -64,13 +76,15 @@ After the selecting process that only selects the "-mean" and "-std" column name
 [79] "fBodyBodyGyroMag-meanFreq()"     "fBodyBodyGyroJerkMag-mean()"     "fBodyBodyGyroJerkMag-std()"     
 [82] "fBodyBodyGyroJerkMag-meanFreq()"
 
-Once that the initial dataset have been done, the script proceed to generate the final dataset and export it to a file named TidySet.txt that is created in your working directory. For this final dataset named "tidySet" into the R script, I have apply the rules of tidying data and present the dataset in LONG form with the following variables and descriptions:
+Once that the initial dataset have been done, the script proceed to generate the final dataset and export it to a file named TidySet.txt that is created in your working directory, If you refer to the coursera project description this would Step 5 of the assignment. For this final dataset named "tidySet" into the R script, I have apply the rules of tidying data and present the dataset in LONG form with the following variables and descriptions:
 
 * "id_Subject": Id of the subject performing activities
 * "Activity"  : Activity performed by the subject 
 * "Variable"  : Selected Variable, this comes from the initial dataset and are all the columns EXCEPT "id_Activity", * * "Activity" and "id_Subject" 
 * "Value"     :Mean of the Value grouped by "id_Subject", "Activity" and "Variable"
 
-The final dataset have 14220 observations (The result of 30 subjects, performing 6 activities of 79 variables) and fulfill the tidy data rules.
+The final dataset have 14220 observations (The result of 30 subjects, performing 6 activities of 79 variables) and fulfill the tidy data rules according to the principles of Tidy data stated by Hadley Wickham, for reference please follow the link:
+
+http://vita.had.co.nz/papers/tidy-data.pdf
 
 For more information about the detailed process and each steps followed to achieve the results please refer to README.MD file and inner commentaries added in the run_analysis.R file.
