@@ -33,7 +33,7 @@ The Original Dataset includes the following files:
 > For the original description of the dataset please follow:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-### Transformations:
+### Transformations and variable description
 
 For detail about the 5 steps required for the Coursera Assignment please refer to ReadMe.md file
 
