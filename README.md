@@ -1,20 +1,30 @@
 # Getting-and-Cleanning-Data-Project
-Repo Made for submitting the getting and Cleanning Data Project
+Repo Made for submitting the Getting and Cleanning Data Project
 
 ## Description of Project
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.  
+The purpose of this project is to demonstrate the ability to collect, work with, and clean a given data set. The goal is to prepare tidy data that can be used for later analysis. 
+
+These files have been submitted to this Repo:
+1) run_analysis.R file contains the script.
+2) A tidy data set presented in LONG FORM named TidySet.md. 
+3) A Code Book file called called CodeBook.md that describes the variables, the data, and the transformations that have been performed to clean up the data.
+4)This ReadMe.md file that explains how the script works.
 
 ## run_analysis.R file
 
-> The goal of this script : Getting,Cleaning the data set,
-> Creating a tidy data set and Uploading it. 
-> This program consists of the five parts(procesures).
+> The goal of this script : Cleaning the data set (please refer to the next section that briefly explains the data set and provides the link to download it), creating a tidy first dataset presented in WIDE FORM, create a second and independent tidy dataset with the average of each variable for each activity and each subject and export it to the TidySet.txt file.
 
-1. Loading dependencies(packages).
-2. Imports data files related to the project.
-3. Extracts only the measurements on the mean and standard deviation & Naming them.
-4. Merges the training and the test data set to create one data set.
-5. Create a independent tidy data set with the average of each variable for each activity and each subject.
+> This program consists of five main parts:
+## I M P O R T A N T: You MUST run this Script AS YOUR WORKING DIRECTORY IN R SPECIFICALLY in THE "UCI HAR Dataset" folder of your computer where you downloaded the data locally (For dataset information and a link to download it please refer to the next section),OTHERWISE the script will NOT RUN as expected.
+## Dependency packages:run_analysis.R file depends on data.table, dplyr and tidyr packages. This packages will be loaded for you when you run your script but first you need to install them in you R Environmment using install.packages() command, please refer to R help for details on this procedure.
+
+1. Merges the training and the test sets to create one dataset.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the dataset.
+4. Appropriately labels the dataset with descriptive variable names presented in WIDE FORM.
+5. From the data set in step 4, creates a second, independent tidy data set presented in LONG FORM with the average of each variable for each activity and each subject.
+
+> For more detailed information about the process of tidying please refer to the run_analysis.R and check the code documentation.
 
 ## Data Set Description
 [Human Activity Recognition Using Smartphones Dataset]
@@ -27,8 +37,3 @@ activityrecognition '@' smartlab.ws
 www.smartlab.ws 
 
 [Data Set File](http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip)
-
-## Dependency packages
-run_analysis.R file depends on data.table, dplyr and tidyr packages. This packages will be loaded for you when you run your script
-
-
