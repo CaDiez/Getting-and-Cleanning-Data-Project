@@ -39,5 +39,5 @@ DITEN - UniversitÃ  degli Studi di Genova, Genoa I-16145, Italy.
 activityrecognition '@' smartlab.ws
 www.smartlab.ws
 
-To download the file to your computer, please click the following link:
-[Data Set File](http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip)run_analysis.R file contains the script.
+To download the file with the original data set to your computer, please click the following link:
+[Data Set File](http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip)
