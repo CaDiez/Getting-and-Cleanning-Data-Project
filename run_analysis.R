@@ -43,7 +43,7 @@ MergedDS.SM <- select(MergedDSSubject,c(1,searchCriteria))
 ##Clear Memory Resources
 rm("MergedDSSubject")
 
-##STEP 3 3.Uses descriptive activity names to name the activities in the data set
+##STEP 3 Uses descriptive activity names to name the activities in the data set
 ##Merges TRAIN & TEST ACTIVITY sets in one
 ##Get the ACTIVITY labels for all the data sets
 ##Get the Labels Data from both TEST & TRAINING
